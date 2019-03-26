@@ -339,7 +339,7 @@ var purchasePrice = [];
 //   purchasePrice.push(item.price);
 //   sumPurchases = purchasePrice.reduce((a,b) => a + b);
 // });
-sumPurchases = itemsPurchasedList.reduce((total, item) => item.price + total, 0)
+sumPurchases = itemsPurchasedList.reduce((total, item) => item.price + total, 0);
 console.log( 'The sum of all purchases is:', sumPurchases );
 
 
@@ -356,12 +356,11 @@ console.log( 'The sum of all purchases is:', sumPurchases );
   HINT(S):
   - Unlike 'QUESTION 08' and 'QUESTION 09', here we're interested in both 'sale' and 'purchase' transactions.
 */
-let netProfit = salesTotal + sumPurchases;
+
 var salesTotal;
 salesTotal = salesToBeAdded.reduce((total, item) => item.price + total, 0);
+let netProfit = salesTotal + sumPurchases;
 console.log( 'The net profit is:', netProfit );
-console.log(sumPurchases)
-console.log(salesTotal)
 
 
 // --------------------------------------------------
@@ -378,7 +377,7 @@ transactions.forEach(function(transaction) {
   if (transaction.items.length > mostItems) {
     mostItems = transaction.items.length;
   }
-})
+});
 console.log( 'The most items sold in a single transaction is:', mostItems );
 
 
@@ -389,8 +388,7 @@ console.log( 'The most items sold in a single transaction is:', mostItems );
   Calculate the sum of the 'purchase' with the fewest items.
 */
 var sumOfSmallestPurchase;
-itemsPurchasedList.forEach(function(item) {
-  
-})
+
+
 
 console.log( 'The sum of the smallest purchase is:', sumOfSmallestPurchase );
